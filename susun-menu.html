@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+
+    <!-- CSs -->
+    <link rel="stylesheet" href="./public/css/my-style.css">
+
+    <title>Susun Menu</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn btn-primary rounded-5 py-0">
+                            <a class="nav-link active" aria-disabled="true"><i class="bi bi-lock"></i>Client Area</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- multi step -->
+    <div class="card w-75 my-5 mx-auto shadow py-4">
+        <div class="card-body d-flex justify-content-evenly">
+            <div>
+                <span class="display-4" style="color: #124CB8;"><i class="bi bi-1-circle-fill"></i></span>
+                <h5 class="fw-bold">Pilih Template</h5>
+            </div>
+            <div>
+                <span class="display-4" style="color: #124CB8;"><i class="bi bi-2-circle-fill"></i></span>
+                <h5 class="fw-bold">Konten Website</h5>
+            </div>
+            <div>
+                <span class="display-4" style="color: #124CB8;"><i class="bi bi-3-circle-fill"></i></span>
+                <h5 class="fw-bold">Tentukan Menu</h5>
+            </div>
+            <div>
+                <span class="display-4 text-secondary"><i class="bi bi-4-circle-fill"></i></span>
+                <h5 class="">Upload Konten</h5>
+            </div>
+            <div>
+                <span class="display-4 text-secondary"><i class="bi bi-5-circle-fill"></i></span>
+                <h5 class="">Finish</h5>
+            </div>
+        </div>
+    </div>
+    <!-- multi step end -->
+    
+    
+    <div class="container">
+    <!-- Upload konten -->
+    <h3 class="text-center mt-4">Susun Menu</h3>
+    <h6 class="text-center mb-4">Kami telah siapkan menu umum website di bawah ini. <br> Anda bisa menubah susunan, mengedit, menambah, dan menghapusnya.</h6>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Menu website</h5>
+
+                    <form action="" method="post">
+                        <ul class="list-unstyled sortable-list">
+                            <li class="item" draggable="true">
+                                <div class="p-2 border mb-3 d-flex rounded shadow-sm details">
+                                    <i class="bi bi-grip-vertical"></i>
+                                    <h6 class="ps-2">Home</h6>
+                                    <button class="btn-close ms-auto"></button>
+                                </div>
+                            </li>
+                            <li class="item" draggable="true">
+                                <div class="p-2 border mb-3 d-flex rounded shadow-sm details">
+                                    <i class="bi bi-grip-vertical"></i>
+                                    <h6 class="ps-2">Tentang</h6>
+                                    <button class="btn-close ms-auto"></button>
+                                </div>
+                            </li>
+                            <li class="item" draggable="true">
+                                <div class="p-2 border mb-3 d-flex rounded shadow-sm details">
+                                    <i class="bi bi-grip-vertical"></i>
+                                    <h6 class="ps-2">Galeri</h6>
+                                    <button class="btn-close ms-auto"></button>
+                                </div>
+                            </li>
+                            <li class="item" draggable="true">
+                                <div class="p-2 border mb-3 d-flex rounded shadow-sm details">
+                                    <i class="bi bi-grip-vertical"></i>
+                                    <h6 class="ps-2">Kontak</h6>
+                                    <button class="btn-close ms-auto"></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+
+                    <form class="rounded " action="" method="post">
+                        <div class="input-group shadow-sm">
+                            <input class="form-control form-control-lg" type="text" placeholder="Tambah Menu" aria-label="Tambah Menu">
+                            <button type="submit" class="btn text-light" style="background-color: #0C337C;"><i class="bi bi-plus-square fs-4"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="text-center">
+                        <div class="my-3">
+                            <button class="btn btn-lg fw-bold text-light" style="background-color: #0C337C;">Lanjutkan</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-lg btn-outline-primary fw-bold">Lewati</button>
+                        </div>
+                        <span>*Anda bisa menkofigurasi nanti setelah proses order selesai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">vidio tutorial</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Upload konten end -->
+    </div>
+
+    <!-- services -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-6 p-5 d-flex" style="background-color: #EAF2FE;">
+                <div class="w-25">
+                    <img src="https://dewahoster.co.id/wp-content/uploads/2022/01/info.svg" class="rounded mx-auto d-block img-thumbnail w-75 shadow-lg p-3" alt="">
+                </div>
+                <div>
+                    <h4>Support center</h4>
+                    <span>Kesulitan dalam hal teknis ? Cukup buka <br> Ticket, kami akan membantu Anda.</span>
+                </div>
+            </div>
+            <div class="col-6 p-5 d-flex" style="background-color: #F4F8FE;">
+                <div class="w-25">
+                    <img src="https://dewahoster.co.id/wp-content/uploads/2022/01/chat.svg" class="rounded mx-auto d-block img-thumbnail w-75 shadow-lg p-3" alt="">
+                </div>
+                <div>
+                    <h4>Let`s talk</h4>
+                    <span>Terhubung dengan layanan live chat yang <br> siap membantu Anda kapanpun.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services end -->
+
+    <!-- footer -->
+    <div class="container-fluid" style="background-color: #2B416B;">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row justify-content-between">
+                    <div class="col-6 col-md-2 mb-3">
+                    <h2 class="text-light">Dewahoster</h2>
+                    <span>Untuk Anda & pelanggan lain, kami berkomitmen menyediakan layanan Go Online berkualitas tinggi.</span>
+                    </div>
+            
+                    <div class="col-6 col-md-2 mb-3">
+                    <h3 class="text-light">Client link</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Client Area</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Knowladgebase</a></li>
+                    </ul>
+                    </div>
+            
+                    <div class="col-6 col-md-2 mb-3">
+                    <h3 class="text-light">Service</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Domain</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Hosting Unlimited</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Hosting Sekolah</a></li>
+                    </ul>
+                    </div>
+            
+                    <div class="col-6 col-md-2 mb-3">
+                    <h3 class="text-light">Contact Us</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Whatsaap</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Address</a></li>
+                    </ul>
+                    </div>
+                </div>
+            
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- footer end -->
+
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="./public/js/draggable.js"></script>
+</body>
+
+</html>
