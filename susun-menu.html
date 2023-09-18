@@ -99,7 +99,7 @@
                     <h5 class="card-title">Menu website</h5>
 
                     <form action="" method="post">
-                        <ul class="list-unstyled sortable-list">
+                        <ul class="list-unstyled sortable-list" id="menu-list">
                             <li class="item" draggable="true">
                                 <div class="p-2 border mb-3 d-flex rounded shadow-sm details">
                                     <i class="bi bi-grip-vertical"></i>
@@ -131,10 +131,10 @@
                         </ul>
                     </form>
 
-                    <form class="rounded " action="" method="post">
+                    <form class="rounded " id="menu-form">
                         <div class="input-group shadow-sm">
-                            <input class="form-control form-control-lg" type="text" placeholder="Tambah Menu" aria-label="Tambah Menu">
-                            <button type="submit" class="btn text-light" style="background-color: #0C337C;"><i class="bi bi-plus-square fs-4"></i></button>
+                            <input class="form-control form-control-lg" type="text" placeholder="Tambah Menu" id="menu-input">
+                            <button type="submit" class="btn text-light" id="add-menu" style="background-color: #0C337C;"><i class="bi bi-plus-square fs-4"></i></button>
                         </div>
                     </form>
 
@@ -245,6 +245,7 @@
         crossorigin="anonymous"></script>
     <!-- js -->
     <script src="./public/js/draggable.js"></script>
+    <script src="./public/js/addMenu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,7 @@
+.item {
+    cursor: move;
+}
+
+.item.is-dragging {
+    opacity: .5;
+}

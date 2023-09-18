@@ -1,29 +1,46 @@
-const sortableList = document.querySelector(".sortable-list");
-const items = sortableList.querySelectorAll(".item");
+const draggables = document.querySelectorAll(".item");
+const droppables = document.querySelectorAll(".sortable-list");
 
-items.forEach(item => {
-    item.addEventListener("dragstart", () => {
-        // Adding dragging class to item after a delay
-        setTimeout(() => item.classList.add("dragging"), 0);
+draggables.forEach((task) => {
+    task.addEventListener("dragstart", () => {
+        task.classList.add("is-dragging");
     });
-    // Removing dragging class from item on dragend event
-    item.addEventListener("dragend", () => item.classList.remove("dragging"));
+    task.addEventListener("dragend", () => {
+        task.classList.remove("is-dragging");
+    });
 });
 
-const initSortableList = (e) => {
-    e.preventDefault();
-    const draggingItem = document.querySelector(".dragging");
-    // Getting all items except currently dragging and making array of them
-    let siblings = [...sortableList.querySelectorAll(".item:not(.dragging)")];
+droppables.forEach((zone) => {
+    zone.addEventListener("dragover", (e) => {
+        e.preventDefault();
 
-    // Finding the sibling after which the dragging item should be placed
-    let nextSibling = siblings.find(sibling => {
-        return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+        const bottomTask = insertAboveTask(zone, e.clientY);
+        const curTask = document.querySelector(".is-dragging");
+
+        if (!bottomTask) {
+            zone.appendChild(curTask);
+        } else {
+            zone.insertBefore(curTask, bottomTask);
+        }
+    });
+});
+
+const insertAboveTask = (zone, mouseY) => {
+    const els = zone.querySelectorAll(".item:not(.is-dragging)");
+
+    let closestTask = null;
+    let closestOffset = Number.NEGATIVE_INFINITY;
+
+    els.forEach((task) => {
+        const { top } = task.getBoundingClientRect();
+
+        const offset = mouseY - top;
+
+        if (offset < 0 && offset > closestOffset) {
+            closestOffset = offset;
+            closestTask = task;
+        }
     });
 
-    // Inserting the dragging item before the found sibling
-    sortableList.insertBefore(draggingItem, nextSibling);
-}
-
-sortableList.addEventListener("dragover", initSortableList);
-sortableList.addEventListener("dragenter", e => e.preventDefault());
+    return closestTask;
+};
